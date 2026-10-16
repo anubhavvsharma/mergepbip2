@@ -1,0 +1,12 @@
+table dim_Managed
+	lineageTag: 45fce813-9da2-4394-a8ff-7667b7dcc355
+
+	column 'Managed by'
+		dataType: string
+		lineageTag: 8aa4f019-0fc0-4306-91f5-5023db73f43f
+		sourceColumn: [Managed by]
+
+	partition dim_Managed = calculated
+		mode: import
+		source = DATATABLE ( "Managed by", STRING, { { "Global" }, { "Regional" }, { "Local" } } )
+

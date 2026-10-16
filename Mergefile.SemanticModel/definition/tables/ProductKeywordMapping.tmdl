@@ -1,0 +1,28 @@
+table ProductKeywordMapping
+	isHidden
+	lineageTag: 8006d411-35ed-48f1-ba6f-76577ced1d1d
+
+	column Keyword
+		dataType: string
+		lineageTag: 688186f9-15ef-4939-82fb-fa67e0ef9079
+		sourceColumn: [Keyword]
+
+	column 'Primary Product'
+		dataType: string
+		lineageTag: ab1580c3-af06-4587-94c6-8a6614563311
+		sourceColumn: [Primary Product]
+
+	column 'Business Unit'
+		dataType: string
+		lineageTag: 6157f691-995c-4ace-905b-dd591c480329
+		sourceColumn: [Business Unit]
+
+	column Priority
+		dataType: int64
+		lineageTag: da541e8c-3cab-4e8e-be7c-1416319afca8
+		sourceColumn: [Priority]
+
+	partition ProductKeywordMapping = calculated
+		mode: import
+		source = DATATABLE ( "Keyword", STRING, "Primary Product", STRING, "Business Unit", STRING, "Priority", INTEGER, { { "belantamab", "Belantamab mafodotin", "Oncology", 1 }, { "belamaf", "Belantamab mafodotin", "Oncology", 2 }, { "dostarlimab", "Dostarlimab", "Oncology", 3 }, { "niraparib", "Niraparib", "Oncology", 4 }, { "depemokimab", "Depemokimab", "Respiratory", 5 }, { "mepolizumab", "Mepolizumab", "Respiratory", 6 }, { "benralizumab", "Benralizumab", "Respiratory", 7 }, { "belimumab", "Belimumab", "Immunology & Inflammation", 8 }, { "gepotidacin", "Gepotidacin", "Infectious Disease & Vaccines", 9 }, { "shingrix", "Shingrix", "Infectious Disease & Vaccines", 10 }, { "arexvy", "Arexvy", "Infectious Disease & Vaccines", 11 } } )
+

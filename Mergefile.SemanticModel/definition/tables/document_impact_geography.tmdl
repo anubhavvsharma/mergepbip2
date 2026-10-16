@@ -1,0 +1,54 @@
+table document_impact_geography
+	lineageTag: 249f9e4d-c9db-4b08-8410-e337a552c6f0
+
+	column Column1
+		dataType: string
+		lineageTag: 59016fcc-e019-47b2-a5eb-aaa0a3902b2d
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 6e6e54a2-25f9-46c5-a6f9-a20842f2743e
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: cf1a8301-c54a-4ecc-aaa5-d2bb72480987
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: d844243e-6182-4d7d-b086-5e7e25b48c73
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 2c8cd66d-284b-479b-8030-0370c16f2a1e
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	partition document_impact_geography = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    document_impact_geography_Sheet = Source{[Item="document_impact_geography",Kind="Sheet"]}[Data]
+				in
+				    document_impact_geography_Sheet
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,250 @@
+relationship f9ec8bc7-d789-41b4-8808-65b0db56605a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: di_citing_clinical_trial.date_inserted
+	toColumn: LocalDateTable_780934ce-e876-4861-ba37-46ade28e0e19.Date
+
+relationship a539be98-ef2d-4c22-ac29-8edd3aff0935
+	joinOnDateBehavior: datePartOnly
+	fromColumn: di_citing_clinical_trial.end_date
+	toColumn: LocalDateTable_f5448fae-87fa-46b3-b50f-60efff1e9933.Date
+
+relationship e14d6190-c069-4c68-b8e4-161ee62e4071
+	joinOnDateBehavior: datePartOnly
+	fromColumn: di_citing_clinical_trial.start_date
+	toColumn: LocalDateTable_815b3ce8-cd43-4c04-b592-b558ab4d3608.Date
+
+relationship 68ddfc50-4bae-467c-b718-258bb86b5e8b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: enr_publication.tactic_date
+	toColumn: LocalDateTable_3bd8d851-8a9c-4357-b2a9-18d2e6995977.Date
+
+relationship 38f2b5ca-26d6-4500-80ae-39603538afef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_altmetric.citation_epubdate
+	toColumn: LocalDateTable_eed1dd0c-0442-495b-abd2-bda959182522.Date
+
+relationship f2973861-6b96-4159-9f3d-49dbe7522bd3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_altmetric.citation_pubdate
+	toColumn: LocalDateTable_b2c1bdfa-c317-4042-b1a8-3afd56955970.Date
+
+relationship c2f0f54d-109c-4322-9b06-8c35e3508aa5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_citing_clinical_trial.date_inserted
+	toColumn: LocalDateTable_4f48f616-6eaf-4668-b73d-2f423ead8c7b.Date
+
+relationship 350f4b16-0404-46b0-a172-5083365b6a48
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_citing_clinical_trial.end_date
+	toColumn: LocalDateTable_b06b09e0-7d02-4c72-892d-a30ff99eb0ae.Date
+
+relationship 6173a463-0fa0-4234-a6fb-8785e907b9ed
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_citing_clinical_trial.start_date
+	toColumn: LocalDateTable_4439e9da-140e-465a-8dac-8e393bb40a6d.Date
+
+relationship 28e3214b-0966-40cb-8303-2198425de47e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_publication.tactic_date
+	toColumn: LocalDateTable_7e40dc5c-5d33-4acf-85d1-30c69a3fe107.Date
+
+relationship aa6f6ad9-ec55-4b1c-8027-e8eca0ffe155
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sd_altmetric.citation_epubdate
+	toColumn: LocalDateTable_010341b0-cd77-46d2-8450-793e0975cbbe.Date
+
+relationship ec351d63-881a-4f91-bd16-9508a67f7aa0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sd_altmetric.citation_pubdate
+	toColumn: LocalDateTable_accea9f5-fc87-4b90-89c8-f570b3153e81.Date
+
+relationship dcffab73-7258-434d-ac3d-f71127a7ff66
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sd_altmetric_post.posted_on
+	toColumn: LocalDateTable_23084d44-a717-4fc9-b137-958d9ca679bb.Date
+
+relationship 38347985-b2b1-4221-9e1c-5f1ac1dd8953
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sd_citing_clinical_trial.date_inserted
+	toColumn: LocalDateTable_7de2aeef-7d26-499a-aa48-ecf9abf3eef8.Date
+
+relationship 1d623ce1-66fe-4f40-a0aa-a222ea53a99c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sd_citing_clinical_trial.end_date
+	toColumn: LocalDateTable_7b4acd96-e379-4912-aca3-f4a792a3e916.Date
+
+relationship 2e8fed37-057a-4d15-b269-cad75918df96
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sd_citing_clinical_trial.start_date
+	toColumn: LocalDateTable_093ad0bf-a8ff-4a03-8cd5-12892d8285f7.Date
+
+relationship AutoDetected_16c78854-01fa-43b5-ba63-5f48fe3bc073
+	fromColumn: di_citing_clinical_trial.publication_ids
+	toColumn: sd_clinical_trial.publication_ids
+
+relationship AutoDetected_a2ba15e0-8b3b-46b2-8b94-5664888fa7f0
+	fromColumn: raw_citing_clinical_trial.publication_ids
+	toColumn: sd_clinical_trial.publication_ids
+
+relationship AutoDetected_b2912133-56c3-4735-ab5b-4fc6d4e4c2b1
+	fromColumn: sd_citing_clinical_trial.publication_ids
+	toColumn: sd_clinical_trial.publication_ids
+
+relationship AutoDetected_fcd847a8-20a8-4223-9c50-9973959eba7c
+	fromColumn: enr_citing_organization_bridge.grid_id
+	toColumn: di_citing_organization.grid_id
+
+relationship AutoDetected_0c7f94aa-4686-492e-94a0-f86560add823
+	fromColumn: enr_pub_citing_pub_org.grid_id
+	toColumn: di_citing_organization.grid_id
+
+relationship AutoDetected_59cb3acf-c993-4c70-bdb9-df0345af9394
+	fromColumn: sd_citing_organization.grid_id
+	toColumn: di_citing_organization.grid_id
+
+relationship AutoDetected_251f81ac-6ed2-4bec-989e-b8f929ebd6a4
+	fromColumn: document_impact_funder.Column9
+	toColumn: di_research_organization.Column9
+
+relationship AutoDetected_97ffd82f-f2ce-4a6c-8290-94ae81e91144
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: enr_funder.source_dimensions_id
+	toColumn: enr_research_organization.source_dimensions_id
+
+relationship AutoDetected_3d21561b-330b-47c4-ab40-341f38ca296f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: raw_funder.source_dimensions_id
+	toColumn: enr_research_organization.source_dimensions_id
+
+relationship AutoDetected_2ebf22be-f9fa-49cf-9759-eb5435d6ecd5
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_funder.source_dimensions_id
+	toColumn: enr_research_organization.source_dimensions_id
+
+relationship AutoDetected_e2cc7256-f3ff-4af3-8abe-969150b8a874
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: enr_funder.source_dimensions_id
+	toColumn: raw_research_organization.source_dimensions_id
+
+relationship AutoDetected_f19e0676-2323-417a-8d9d-66fd49e526d2
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: raw_funder.source_dimensions_id
+	toColumn: raw_research_organization.source_dimensions_id
+
+relationship AutoDetected_859c49dc-d525-4b4b-a384-f91f8ef88d2d
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_funder.source_dimensions_id
+	toColumn: raw_research_organization.source_dimensions_id
+
+relationship AutoDetected_d6bc1109-e74a-4b89-b378-42e48a9fbcc3
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: enr_funder.source_dimensions_id
+	toColumn: sd_research_organization.source_dimensions_id
+
+relationship AutoDetected_fe9cc1dc-9f3f-4a52-ac23-d064cdf2b385
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: raw_funder.source_dimensions_id
+	toColumn: sd_research_organization.source_dimensions_id
+
+relationship AutoDetected_8c577151-488b-4793-b6e6-2ad0c4e89fd1
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_funder.source_dimensions_id
+	toColumn: sd_research_organization.source_dimensions_id
+
+relationship AutoDetected_a6cdac8b-4bd7-4732-a66c-da899ee02852
+	fromColumn: enr_publication.journal_id
+	toColumn: enr_journal_stats.journal_id
+
+relationship AutoDetected_b446a0d7-8edc-4079-972b-03b5a638a1ab
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: raw_journal_stats.journal_id
+	toColumn: enr_journal_stats.journal_id
+
+relationship AutoDetected_ae359e0a-9b12-46c8-8a79-03cdb4858dcb
+	fromColumn: raw_publication.journal_id
+	toColumn: enr_journal_stats.journal_id
+
+relationship AutoDetected_9902f3b0-fe45-4d43-9865-557641360133
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_journal_stats.journal_id
+	toColumn: enr_journal_stats.journal_id
+
+relationship AutoDetected_c35590e3-0816-4985-aad1-ac1dcbae27a8
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_journal_stats.journal_title
+	toColumn: raw_journal_stats.journal_title
+
+relationship AutoDetected_078c6576-337e-4982-af95-0826070bd6eb
+	fromColumn: enr_publication.doi
+	toColumn: raw_altmetric.doi
+
+relationship AutoDetected_9c594bd1-1d0c-4b1c-81d6-3fb294eebaad
+	fromColumn: raw_publication.doi
+	toColumn: raw_altmetric.doi
+
+relationship AutoDetected_0144c85c-15de-4b86-9ad6-b983e49a699f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_altmetric.doi
+	toColumn: raw_altmetric.doi
+
+relationship AutoDetected_89650780-e392-4e67-9653-c8a038df566d
+	fromColumn: sd_altmetric_geo.doi
+	toColumn: raw_altmetric.doi
+
+relationship AutoDetected_953fcd68-e112-4dde-a12d-099d0a5a45d5
+	fromColumn: sd_altmetric_post.doi
+	toColumn: raw_altmetric.doi
+
+relationship AutoDetected_f0c7c0dc-27c2-42b2-a5b0-768e7704c979
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: sd_altmetric_sentiment.doi
+	toColumn: raw_altmetric.doi
+
+relationship AutoDetected_668749c3-26b8-4f9f-bf1e-4883180944f9
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: raw_publication.dimensions_id
+	toColumn: enr_publication.dimensions_id
+
+relationship 8e66a4cb-762d-4abf-b573-1369b1740f19
+	joinOnDateBehavior: datePartOnly
+	fromColumn: enr_publication.tactic_date
+	toColumn: Date.Date
+
+relationship 46e35c70-e79e-47d7-b09e-46d087f6952d
+	fromColumn: enr_pub_citing_pub_link.original_dimensions_id
+	toColumn: enr_publication.dimensions_id
+
+relationship Portfolio_Region
+	crossFilteringBehavior: bothDirections
+	fromColumn: PublicationRegion.'Publication Key'
+	toColumn: enr_publication.dimensions_id
+
+relationship Portfolio_Managed
+	fromColumn: enr_publication.'Managed by'
+	toColumn: dim_Managed.'Managed by'
+
+relationship Portfolio_Product
+	fromColumn: enr_publication.'Primary Product'
+	toColumn: dim_Product.'Primary Product'
+

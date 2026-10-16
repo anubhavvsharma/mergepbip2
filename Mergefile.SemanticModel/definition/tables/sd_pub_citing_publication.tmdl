@@ -1,0 +1,82 @@
+table sd_pub_citing_publication
+	lineageTag: e48e77f0-ccc3-4790-802a-82222e97931c
+
+	column citing_dimensions_id
+		dataType: string
+		lineageTag: 325c6064-553b-43b9-81d1-6cb194ea5338
+		summarizeBy: none
+		sourceColumn: citing_dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column citing_doi
+		dataType: string
+		lineageTag: 5a8a68fb-6fd3-4882-94e6-65b1f0e55446
+		summarizeBy: none
+		sourceColumn: citing_doi
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_id
+		dataType: string
+		lineageTag: 37e7ab26-9e46-40ca-825e-28a99e25b70b
+		summarizeBy: none
+		sourceColumn: journal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_title
+		dataType: string
+		lineageTag: 72072c4c-2a5f-4520-a6cb-a2ed242f20b6
+		summarizeBy: none
+		sourceColumn: journal_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column pub_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 57edd74f-5203-4d4c-a9c4-f69b953b7caf
+		summarizeBy: sum
+		sourceColumn: pub_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column times_cited
+		dataType: int64
+		formatString: 0
+		lineageTag: e408324c-6eaf-4e11-bc47-3b57fc96dc3f
+		summarizeBy: sum
+		sourceColumn: times_cited
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_citation_ratio
+		dataType: string
+		lineageTag: 854f9043-3417-41e2-a1f7-acc82af05c6f
+		summarizeBy: none
+		sourceColumn: field_citation_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column altmetric_score_citing
+		dataType: string
+		lineageTag: bad9b41d-f252-4dd4-89f6-f5a443935094
+		summarizeBy: none
+		sourceColumn: altmetric_score_citing
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sd_pub_citing_publication = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    sd_pub_citing_publication_Sheet = Source{[Item="sd_pub_citing_publication",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(sd_pub_citing_publication_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"citing_dimensions_id", type text}, {"citing_doi", type text}, {"journal_id", type text}, {"journal_title", type text}, {"pub_year", Int64.Type}, {"times_cited", Int64.Type}, {"field_citation_ratio", type any}, {"altmetric_score_citing", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

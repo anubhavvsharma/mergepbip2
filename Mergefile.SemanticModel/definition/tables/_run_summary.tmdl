@@ -1,0 +1,30 @@
+table _run_summary
+	lineageTag: f8e05e09-3b54-40bd-bb94-613721a6a94a
+
+	column Column1
+		dataType: string
+		lineageTag: 40057a47-6214-4a60-b972-a380788032ae
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 5031c6f4-ed2d-41c0-85c1-2eec18c5c59a
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _run_summary = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    _run_summary_Sheet = Source{[Item="_run_summary",Kind="Sheet"]}[Data]
+				in
+				    _run_summary_Sheet
+
+	annotation PBI_ResultType = Table
+

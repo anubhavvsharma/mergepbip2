@@ -1,0 +1,23 @@
+table CountryRegion
+	isHidden
+	lineageTag: 2ed2abb9-fc40-42f2-abfe-afd9c1d86976
+
+	column 'Country Code'
+		dataType: string
+		lineageTag: 7db7c8fa-3ec1-44eb-b067-598b9b111c6b
+		sourceColumn: [Country Code]
+
+	column 'Country Name'
+		dataType: string
+		lineageTag: d44b71d2-2447-48a6-9cd0-5d96b008d066
+		sourceColumn: [Country Name]
+
+	column Region
+		dataType: string
+		lineageTag: b9038b16-b874-449e-a26a-14f75ece3de8
+		sourceColumn: [Region]
+
+	partition CountryRegion = calculated
+		mode: import
+		source = DATATABLE ( "Country Code", STRING, "Country Name", STRING, "Region", STRING, { { "US", "United States", "North America" }, { "CA", "Canada", "North America" }, { "MX", "Mexico", "Latin America" }, { "AR", "Argentina", "Latin America" }, { "BR", "Brazil", "Latin America" }, { "CL", "Chile", "Latin America" }, { "CO", "Colombia", "Latin America" }, { "GT", "Guatemala", "Latin America" }, { "PA", "Panama", "Latin America" }, { "PE", "Peru", "Latin America" }, { "PY", "Paraguay", "Latin America" }, { "UY", "Uruguay", "Latin America" }, { "GB", "United Kingdom", "Europe" }, { "AT", "Austria", "Europe" }, { "BE", "Belgium", "Europe" }, { "BG", "Bulgaria", "Europe" }, { "CH", "Switzerland", "Europe" }, { "CY", "Cyprus", "Europe" }, { "CZ", "Czechia", "Europe" }, { "DE", "Germany", "Europe" }, { "DK", "Denmark", "Europe" }, { "EE", "Estonia", "Europe" }, { "ES", "Spain", "Europe" }, { "FI", "Finland", "Europe" }, { "FR", "France", "Europe" }, { "GR", "Greece", "Europe" }, { "HR", "Croatia", "Europe" }, { "HU", "Hungary", "Europe" }, { "IE", "Ireland", "Europe" }, { "IT", "Italy", "Europe" }, { "NL", "Netherlands", "Europe" }, { "NO", "Norway", "Europe" }, { "PL", "Poland", "Europe" }, { "PT", "Portugal", "Europe" }, { "RO", "Romania", "Europe" }, { "RU", "Russia", "Europe" }, { "SE", "Sweden", "Europe" }, { "TR", "Turkey", "Europe" }, { "UA", "Ukraine", "Europe" }, { "AU", "Australia", "Asia-Pacific" }, { "BD", "Bangladesh", "Asia-Pacific" }, { "BT", "Bhutan", "Asia-Pacific" }, { "CN", "China", "Asia-Pacific" }, { "ID", "Indonesia", "Asia-Pacific" }, { "IN", "India", "Asia-Pacific" }, { "JP", "Japan", "Asia-Pacific" }, { "KH", "Cambodia", "Asia-Pacific" }, { "KR", "South Korea", "Asia-Pacific" }, { "KZ", "Kazakhstan", "Asia-Pacific" }, { "LA", "Laos", "Asia-Pacific" }, { "LK", "Sri Lanka", "Asia-Pacific" }, { "MN", "Mongolia", "Asia-Pacific" }, { "MY", "Malaysia", "Asia-Pacific" }, { "NZ", "New Zealand", "Asia-Pacific" }, { "PH", "Philippines", "Asia-Pacific" }, { "SG", "Singapore", "Asia-Pacific" }, { "TH", "Thailand", "Asia-Pacific" }, { "TW", "Taiwan", "Asia-Pacific" }, { "VN", "Vietnam", "Asia-Pacific" }, { "AE", "United Arab Emirates", "Middle East & Africa" }, { "BH", "Bahrain", "Middle East & Africa" }, { "EG", "Egypt", "Middle East & Africa" }, { "GE", "Georgia", "Middle East & Africa" }, { "GH", "Ghana", "Middle East & Africa" }, { "IL", "Israel", "Middle East & Africa" }, { "IR", "Iran", "Middle East & Africa" }, { "JO", "Jordan", "Middle East & Africa" }, { "KE", "Kenya", "Middle East & Africa" }, { "KW", "Kuwait", "Middle East & Africa" }, { "LB", "Lebanon", "Middle East & Africa" }, { "MZ", "Mozambique", "Middle East & Africa" }, { "NG", "Nigeria", "Middle East & Africa" }, { "OM", "Oman", "Middle East & Africa" }, { "QA", "Qatar", "Middle East & Africa" }, { "SA", "Saudi Arabia", "Middle East & Africa" }, { "ZA", "South Africa", "Middle East & Africa" } } )
+

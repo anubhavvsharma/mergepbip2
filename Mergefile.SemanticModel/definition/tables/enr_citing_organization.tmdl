@@ -1,0 +1,54 @@
+table enr_citing_organization
+	lineageTag: 7d7d7fbf-f064-4b24-8d97-0d10a47e54bc
+
+	column Column1
+		dataType: string
+		lineageTag: 359abca7-b420-4984-9906-f6cbbda3f14b
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 2e4d2b65-89b2-49d6-875d-018c345b96ec
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: d711bfcb-4dd4-4166-a319-296d2dbdd80b
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: bb8bf5b9-5f57-4eb4-9dbf-a18f08231ab1
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 0bc9593f-cade-4d13-a2e1-6fa43d0ce7d6
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_citing_organization = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_citing_organization_Sheet = Source{[Item="enr_citing_organization",Kind="Sheet"]}[Data]
+				in
+				    enr_citing_organization_Sheet
+
+	annotation PBI_ResultType = Table
+

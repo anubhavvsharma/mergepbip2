@@ -1,0 +1,94 @@
+table di_pub_citing_journal
+	lineageTag: 12efe04c-a7d6-4ce0-b3c8-a3ecf5a82659
+
+	column Column1
+		dataType: string
+		lineageTag: e255153c-cde1-45b4-a77a-50590e111a1b
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: c2611dee-3394-4ed7-b937-b830e003808e
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: a2e37fda-5f82-41d4-83d4-bd039b868067
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: d0573f36-dc9c-4b71-9b2f-6c9ff4a1371d
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 829c5f25-7c5f-47d2-ba19-1441b7bca6c7
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: c8d73850-ae38-4ce6-9d76-d6a9dcd159d7
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: c95f1c8f-2208-417a-89a7-91baf671b19e
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: 0121371c-fb52-4ae8-8aed-17ad10698b7a
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: 21d46594-3918-4e90-862e-173632cd6bb8
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		lineageTag: 5bb79db0-3695-4169-97ed-a986787f530b
+		summarizeBy: none
+		sourceColumn: Column10
+
+		annotation SummarizationSetBy = Automatic
+
+	partition di_pub_citing_journal = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    di_pub_citing_journal_Sheet = Source{[Item="di_pub_citing_journal",Kind="Sheet"]}[Data]
+				in
+				    di_pub_citing_journal_Sheet
+
+	annotation PBI_ResultType = Table
+
