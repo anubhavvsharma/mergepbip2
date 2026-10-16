@@ -1,0 +1,88 @@
+cultureInfo en-IN
+
+	linguisticMetadata =
+			{
+			  "Version": "1.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "enr_publication.publication_year": {
+			      "Binding": {
+			        "ConceptualEntity": "enr_publication",
+			        "ConceptualProperty": "publication_year"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.previous_years_citations": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Previous Years Citations"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.current_year_citations": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Current Year Citations"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.median_per_publication": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Median per Publication"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.previous_years_recent_citations": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Previous Years Recent Citations"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.current_year_recent_citations": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Current Year Recent Citations"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.median_recent_citations_per_publication": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Median Recent Citations per Publication"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.citation_detail_serial": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "Citation Detail Serial"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.rank": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "RANK"
+			      },
+			      "State": "Generated"
+			    },
+			    "table_measures.mcp_priority": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures",
+			        "ConceptualProperty": "MCP Priority"
+			      },
+			      "State": "Generated"
+			    },
+			    "dim_product.priority_label": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Product",
+			        "ConceptualProperty": "Priority Label"
+			      },
+			      "State": "Generated"
+			    }
+			  }
+			}
+		contentType: json
+

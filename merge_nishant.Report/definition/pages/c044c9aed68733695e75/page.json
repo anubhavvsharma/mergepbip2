@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "c044c9aed68733695e75",
-  "displayName": "Citation Overview",
-  "displayOption": "FitToPage",
-  "height": 410,
-  "width": 1182
-}
