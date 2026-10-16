@@ -1,0 +1,59 @@
+table PublicationRegion
+	lineageTag: c5e0a906-6ec0-4bbe-a11a-8d0901cbb83e
+
+	column 'Publication Key'
+		dataType: string
+		lineageTag: 9b19aa0d-506f-4493-8df6-747981e63610
+		sourceColumn: [Publication Key]
+
+	column 'Country Code'
+		dataType: string
+		lineageTag: f016e580-c3f7-4385-ad28-e31c2862e5ff
+		sourceColumn: [Country Code]
+
+	column 'Country Name'
+		dataType: string
+		lineageTag: dabb4123-d77a-4037-8240-b08446f8d716
+		sourceColumn: [Country Name]
+
+	column Region
+		dataType: string
+		lineageTag: ec5a5f7b-5bbf-426e-aefb-74685a84a5c9
+		sourceColumn: [Region]
+
+	partition PublicationRegion = calculated
+		mode: import
+		source =
+				VAR PublicationsWithCountries =
+					SELECTCOLUMNS (
+						FILTER ( enr_publication, NOT ISBLANK ( enr_publication[research_org_countries] ) ),
+						"Publication Key", enr_publication[dimensions_id],
+						"Country Path", enr_publication[research_org_countries]
+					)
+				VAR ExpandedCountries =
+					GENERATE (
+						PublicationsWithCountries,
+						VAR CurrentPath = [Country Path]
+						RETURN
+							SELECTCOLUMNS (
+								GENERATESERIES ( 1, PATHLENGTH ( CurrentPath ) ),
+								"Country Name", PATHITEM ( CurrentPath, [Value], TEXT )
+							)
+					)
+				VAR MappedCountries =
+					ADDCOLUMNS (
+						ExpandedCountries,
+						"Mapped Country Code", LOOKUPVALUE ( CountryRegion[Country Code], CountryRegion[Country Name], [Country Name] ),
+						"Mapped Region", LOOKUPVALUE ( CountryRegion[Region], CountryRegion[Country Name], [Country Name] )
+					)
+				RETURN
+					DISTINCT (
+						SELECTCOLUMNS (
+							FILTER ( MappedCountries, NOT ISBLANK ( [Publication Key] ) && NOT ISBLANK ( [Mapped Region] ) ),
+							"Publication Key", [Publication Key],
+							"Country Code", [Mapped Country Code],
+							"Country Name", [Country Name],
+							"Region", [Mapped Region]
+						)
+					)
+

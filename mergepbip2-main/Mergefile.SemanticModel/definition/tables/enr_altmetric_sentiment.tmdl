@@ -1,0 +1,86 @@
+table enr_altmetric_sentiment
+	lineageTag: c9c4c4d3-2d8e-45a8-84f8-cdf4886881dd
+
+	column Column1
+		dataType: string
+		lineageTag: 42d995f7-80db-4c27-b3fc-75fffd395361
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 65d0f6c8-a040-4549-8288-0ea95d5da910
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 7171832d-1e99-4f1f-9672-61e8c4c8fde5
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 522f2658-ea6c-4996-8eec-2a641bd2519a
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 1a635a3c-9d2c-4730-bd32-1a233aa6d791
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: 0be57dd9-72c3-43ac-a5eb-0189c9c2423f
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: 82b3ea40-d615-4123-8189-574ab72091c6
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: 2ec399b6-10da-40ac-92de-520017c7b8a8
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: 8e49c3ec-d45c-4d23-93cf-7674834c1091
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_altmetric_sentiment = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_altmetric_sentiment_Sheet = Source{[Item="enr_altmetric_sentiment",Kind="Sheet"]}[Data]
+				in
+				    enr_altmetric_sentiment_Sheet
+
+	annotation PBI_ResultType = Table
+

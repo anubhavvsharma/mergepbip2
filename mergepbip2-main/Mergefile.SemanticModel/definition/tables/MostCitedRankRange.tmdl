@@ -1,0 +1,29 @@
+table MostCitedRankRange
+	lineageTag: 0a72d8b1-bf44-4b68-b263-d8f448c833a5
+
+	column 'Rank Range'
+		dataType: string
+		lineageTag: 63ffecdb-0569-4f0d-83ba-98c3d767ab5c
+		sourceColumn: [Rank Range]
+		sortByColumn: Sort
+
+	column 'Top N'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 65acf2c7-285e-47a5-b882-927a8203a7d2
+		sourceColumn: [Top N]
+
+	column Sort
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c7a29b28-f67f-43e0-8705-0d2ecf868b21
+		sourceColumn: [Sort]
+
+	partition MostCitedRankRange = calculated
+		mode: import
+		source = DATATABLE ( "Rank Range", STRING, "Top N", INTEGER, "Sort", INTEGER, { { "Top 10", 10, 1 }, { "Top 25", 25, 2 }, { "Top 50", 50, 3 }, { "All", 2147483647, 4 } } )
+
+	annotation PBI_Id = 70d590d5614c45a7a6b30c047307ceea
+

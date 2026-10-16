@@ -1,0 +1,49 @@
+table sd_citing_organization
+	lineageTag: 8f0c402c-9d55-4d6e-9220-64e164d327cf
+
+	column grid_id
+		dataType: string
+		lineageTag: 31370dde-385e-44f6-b13a-011322e55378
+		summarizeBy: none
+		sourceColumn: grid_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column org_name
+		dataType: string
+		lineageTag: 1949430c-1c7d-493b-9e9f-37cff21b461d
+		summarizeBy: none
+		sourceColumn: org_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 1bba5b8e-0658-4385-aaf2-ad125163d137
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_gsk
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 57998c7f-5d2b-4f8c-98eb-d27a4dd13e1c
+		summarizeBy: none
+		sourceColumn: is_gsk
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sd_citing_organization = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    sd_citing_organization_Sheet = Source{[Item="sd_citing_organization",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(sd_citing_organization_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"grid_id", type text}, {"org_name", type text}, {"country_name", type text}, {"is_gsk", type logical}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

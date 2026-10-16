@@ -1,0 +1,158 @@
+table sd_researcher
+	lineageTag: 79a78261-90a7-45bf-a7e8-ca425363c864
+
+	column Column1
+		dataType: string
+		lineageTag: 28d6eca5-5c27-407c-afff-d6a38b676782
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 0f97141a-66d1-4d5a-aacc-9c0d3cc11284
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 95e02a4a-1655-4ab2-907e-35c59d7fac89
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 9106d161-568e-4dc0-8338-f6677f118380
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 9d8f1a86-53ad-4a9e-86b9-0694baf49276
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: f5b033ee-3022-45f2-aac3-bad03107bf21
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: 2b0be12b-637c-4fe4-a16c-48c5828b73a3
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: caaffff6-e96d-4930-ac7a-f142a4367df9
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: c1f1c3ac-a2a2-4e4c-8c7d-60608b79db0a
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		lineageTag: ce281a7c-5f2d-44e3-906e-1f1245d05725
+		summarizeBy: none
+		sourceColumn: Column10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column11
+		dataType: string
+		lineageTag: 83a23bc7-f7d8-47e3-ae86-90a97ecc3919
+		summarizeBy: none
+		sourceColumn: Column11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column12
+		dataType: string
+		lineageTag: 45f00cb0-8668-4d21-9b23-d56a92645643
+		summarizeBy: none
+		sourceColumn: Column12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column13
+		dataType: string
+		lineageTag: d2e989ae-5d7f-4eaa-9315-57945022acc7
+		summarizeBy: none
+		sourceColumn: Column13
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column14
+		dataType: string
+		lineageTag: 5f7a4155-cfe2-4555-89fb-a5cc9623fa9b
+		summarizeBy: none
+		sourceColumn: Column14
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column15
+		dataType: string
+		lineageTag: c0d04e6f-7f14-4ca5-99e9-fe4aded19be4
+		summarizeBy: none
+		sourceColumn: Column15
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column16
+		dataType: string
+		lineageTag: 4e71e506-087e-44ef-8ec1-483424cb4480
+		summarizeBy: none
+		sourceColumn: Column16
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column17
+		dataType: string
+		lineageTag: 2ac8ab89-3d06-42b7-8f08-42a12e84286c
+		summarizeBy: none
+		sourceColumn: Column17
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column18
+		dataType: string
+		lineageTag: ce38bdc7-8e44-4a02-9816-48023d77b989
+		summarizeBy: none
+		sourceColumn: Column18
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sd_researcher = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    sd_researcher_Sheet = Source{[Item="sd_researcher",Kind="Sheet"]}[Data]
+				in
+				    sd_researcher_Sheet
+
+	annotation PBI_ResultType = Table
+

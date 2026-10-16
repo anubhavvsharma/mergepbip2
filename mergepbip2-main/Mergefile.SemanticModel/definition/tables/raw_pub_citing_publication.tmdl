@@ -1,0 +1,106 @@
+table raw_pub_citing_publication
+	lineageTag: 1f3ec0f2-ab46-4807-b5e9-fedfe95680e2
+
+	column citing_dimensions_id
+		dataType: string
+		lineageTag: 85ed950b-9a0c-4d91-b7ae-83daa437cee8
+		summarizeBy: none
+		sourceColumn: citing_dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column citing_doi
+		dataType: string
+		lineageTag: f95c8d57-7bf8-4cfd-9529-2da43df883dc
+		summarizeBy: none
+		sourceColumn: citing_doi
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_id
+		dataType: string
+		lineageTag: 3a5440ba-af71-44ab-9bcb-7dbeb45b4edd
+		summarizeBy: none
+		sourceColumn: journal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_title
+		dataType: string
+		lineageTag: 3a454a9a-04a1-4dfd-a78b-15d3b37540a6
+		summarizeBy: none
+		sourceColumn: journal_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column pub_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b303482-b469-408e-a85c-1ffed3e4b1da
+		summarizeBy: sum
+		sourceColumn: pub_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column document_type
+		dataType: string
+		lineageTag: a8deac3b-a4dd-4948-8f61-152c3d85507b
+		summarizeBy: none
+		sourceColumn: document_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column times_cited
+		dataType: int64
+		formatString: 0
+		lineageTag: 14172edf-3b90-47b3-a727-608687d2c815
+		summarizeBy: sum
+		sourceColumn: times_cited
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_citation_ratio
+		dataType: string
+		lineageTag: 3dcd7f10-12f5-4706-b0a4-75a1133c5c3a
+		summarizeBy: none
+		sourceColumn: field_citation_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column altmetric_score_citing
+		dataType: string
+		lineageTag: 0cb3adc0-2be1-4136-ba93-bc0860ec4f48
+		summarizeBy: none
+		sourceColumn: altmetric_score_citing
+
+		annotation SummarizationSetBy = Automatic
+
+	column reference_ids
+		dataType: string
+		lineageTag: 4ceceb85-4602-48a9-a0db-4374c86d8753
+		summarizeBy: none
+		sourceColumn: reference_ids
+
+		annotation SummarizationSetBy = Automatic
+
+	column research_orgs
+		dataType: string
+		lineageTag: a0e8c7e4-9739-48fd-8554-9dd3556604e3
+		summarizeBy: none
+		sourceColumn: research_orgs
+
+		annotation SummarizationSetBy = Automatic
+
+	partition raw_pub_citing_publication = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    raw_pub_citing_publication_Sheet = Source{[Item="raw_pub_citing_publication",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(raw_pub_citing_publication_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"citing_dimensions_id", type text}, {"citing_doi", type text}, {"journal_id", type text}, {"journal_title", type text}, {"pub_year", Int64.Type}, {"document_type", type text}, {"times_cited", Int64.Type}, {"field_citation_ratio", type any}, {"altmetric_score_citing", type any}, {"reference_ids", type text}, {"research_orgs", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,40 @@
+table enr_pub_citing_pub_link
+	lineageTag: 77ffa533-8c0e-46d0-bd45-3ab43c083c11
+
+	column citing_dimensions_id
+		dataType: string
+		lineageTag: 04e32ca7-9020-475d-aaba-9582ede84f05
+		summarizeBy: none
+		sourceColumn: citing_dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column original_dimensions_id
+		dataType: string
+		lineageTag: e5fb01ef-3e1c-4560-86df-4b699f195a5c
+		summarizeBy: none
+		sourceColumn: original_dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column enr_loaded_at
+		dataType: string
+		lineageTag: 1f3befb4-c410-49bb-82ce-438c07ff90c9
+		summarizeBy: none
+		sourceColumn: enr_loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_pub_citing_pub_link = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_pub_citing_pub_link_Sheet = Source{[Item="enr_pub_citing_pub_link",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(enr_pub_citing_pub_link_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"citing_dimensions_id", type text}, {"original_dimensions_id", type text}, {"enr_loaded_at", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

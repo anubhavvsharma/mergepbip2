@@ -1,0 +1,102 @@
+table di_pub_citing_publication
+	lineageTag: da9773fe-28d7-4658-85ec-b729e72dd786
+
+	column Column1
+		dataType: string
+		lineageTag: a8b082b3-a627-4b6b-9f10-b86ef01e39f5
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: d173c497-1d9e-4914-9681-1df2b41a503c
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 0a8f1e0c-c9b3-4537-a097-2b996c978950
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 5c84b950-ebd0-4219-a969-73242a2d943b
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 7d7fdee2-de5b-4bee-8b9c-b31a7c451b72
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: d7765005-b5e9-443d-82cd-85797f0dfcce
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: e3c53e64-4641-4c5d-bee8-51dbe9083288
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: c4415983-4df7-4bce-8a34-03b8df4945a6
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: 311a693b-4ed3-4bf3-a472-ef42a606ef0c
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		lineageTag: a8721bf4-123f-4f5c-808f-930f8671b219
+		summarizeBy: none
+		sourceColumn: Column10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column11
+		dataType: string
+		lineageTag: 03eb41ae-104b-4f49-9bac-e89404880141
+		summarizeBy: none
+		sourceColumn: Column11
+
+		annotation SummarizationSetBy = Automatic
+
+	partition di_pub_citing_publication = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    di_pub_citing_publication_Sheet = Source{[Item="di_pub_citing_publication",Kind="Sheet"]}[Data]
+				in
+				    di_pub_citing_publication_Sheet
+
+	annotation PBI_ResultType = Table
+

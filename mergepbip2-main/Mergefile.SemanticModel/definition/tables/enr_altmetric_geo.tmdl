@@ -1,0 +1,54 @@
+table enr_altmetric_geo
+	lineageTag: 78a7aec5-d28a-4849-aae4-50c0b82ff94c
+
+	column Column1
+		dataType: string
+		lineageTag: 6183ab63-f971-48f8-b439-642f207c91fd
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 77d2cd7d-5290-4e81-9a20-8ef2344ba950
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: fcdf336f-eec9-4104-a2ac-3709f87ac9d9
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: a9158b5a-1357-44e8-a3db-eefd118ca1c7
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 07e2438f-4db3-40ae-bda7-9881cedb08c3
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_altmetric_geo = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_altmetric_geo_Sheet = Source{[Item="enr_altmetric_geo",Kind="Sheet"]}[Data]
+				in
+				    enr_altmetric_geo_Sheet
+
+	annotation PBI_ResultType = Table
+

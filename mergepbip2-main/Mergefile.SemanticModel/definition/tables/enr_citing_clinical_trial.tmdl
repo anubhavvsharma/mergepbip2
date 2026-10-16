@@ -1,0 +1,358 @@
+table enr_citing_clinical_trial
+	lineageTag: 03164cbc-c71d-44f7-ae9e-cab9dae7266b
+
+	column Column1
+		dataType: string
+		lineageTag: d202072c-d2ca-4456-9259-37169142eef5
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 4de89eb1-2981-4b6c-90f8-8542514f2806
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: a3bebb88-b990-4f6c-ac08-1f323775b271
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 6523bfbf-5e94-4fc9-87c0-db0caf380dfa
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 79965a1e-7127-4d65-9d46-04001e27d7f1
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: 45c86ad0-d0dd-4bff-ae3c-063d241be442
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: c188863b-d422-46fb-962f-a33d1c542557
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: 4469e6a9-0a2c-4117-8c45-ca05e9183424
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: bc1bf6af-cf9c-4c83-bc7e-7450d82b2960
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		lineageTag: 6bd66c35-88b6-487c-8a42-dc079ddc56f2
+		summarizeBy: none
+		sourceColumn: Column10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column11
+		dataType: string
+		lineageTag: fc6dbd40-5094-448e-9dfb-29fc52bb5840
+		summarizeBy: none
+		sourceColumn: Column11
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column12
+		dataType: string
+		lineageTag: 5145bd9b-40ea-4d2a-92bb-12d751dff574
+		summarizeBy: none
+		sourceColumn: Column12
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column13
+		dataType: string
+		lineageTag: f6e5a651-ca84-4de2-b7aa-4f81e026aa89
+		summarizeBy: none
+		sourceColumn: Column13
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column14
+		dataType: string
+		lineageTag: bcd30653-3350-41a8-a2e3-cd223a8807e8
+		summarizeBy: none
+		sourceColumn: Column14
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column15
+		dataType: string
+		lineageTag: 11c36c08-a7b8-4156-8786-3813df0c6b11
+		summarizeBy: none
+		sourceColumn: Column15
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column16
+		dataType: string
+		lineageTag: 7f6cf9a2-9815-407a-b31a-4c831b80e808
+		summarizeBy: none
+		sourceColumn: Column16
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column17
+		dataType: string
+		lineageTag: 1fbb947f-d304-4539-bc82-afe5297fa8f9
+		summarizeBy: none
+		sourceColumn: Column17
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column18
+		dataType: string
+		lineageTag: 3527b483-6daa-4b62-9c33-a7a00527bbe2
+		summarizeBy: none
+		sourceColumn: Column18
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column19
+		dataType: string
+		lineageTag: 44f84e97-57a5-4b9d-9361-e96bde34ec37
+		summarizeBy: none
+		sourceColumn: Column19
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column20
+		dataType: string
+		lineageTag: 1bbd2df0-74ea-476a-b221-9effb2edd087
+		summarizeBy: none
+		sourceColumn: Column20
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column21
+		dataType: string
+		lineageTag: 2a3f45eb-8a4a-4c72-a800-5125021b52d9
+		summarizeBy: none
+		sourceColumn: Column21
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column22
+		dataType: string
+		lineageTag: 2a411415-4522-4ace-92d8-d807e156409c
+		summarizeBy: none
+		sourceColumn: Column22
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column23
+		dataType: string
+		lineageTag: bc281857-3721-4063-a2c8-16a191e3a458
+		summarizeBy: none
+		sourceColumn: Column23
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column24
+		dataType: string
+		lineageTag: a0da8d60-4d8e-40d8-9515-dd4b54048758
+		summarizeBy: none
+		sourceColumn: Column24
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column25
+		dataType: string
+		lineageTag: 7fdc9e3d-777c-4a1d-b315-b437fc7d9631
+		summarizeBy: none
+		sourceColumn: Column25
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column26
+		dataType: string
+		lineageTag: 0a7178f9-c474-49c3-a971-3b79d54b778c
+		summarizeBy: none
+		sourceColumn: Column26
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column27
+		dataType: string
+		lineageTag: 0705ac43-ad1c-494d-be99-0281cc7b7fdb
+		summarizeBy: none
+		sourceColumn: Column27
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column28
+		dataType: string
+		lineageTag: 6fc8caca-a856-436f-88b2-7d97a9587ae3
+		summarizeBy: none
+		sourceColumn: Column28
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column29
+		dataType: string
+		lineageTag: 9c9819f6-343f-49f5-8981-f27cddba3988
+		summarizeBy: none
+		sourceColumn: Column29
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column30
+		dataType: string
+		lineageTag: fb3b4888-f915-44d9-bb58-fe6df3661a6e
+		summarizeBy: none
+		sourceColumn: Column30
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column31
+		dataType: string
+		lineageTag: c5138e8e-7eba-4d90-835e-7f464503061e
+		summarizeBy: none
+		sourceColumn: Column31
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column32
+		dataType: string
+		lineageTag: a9e6fdb4-96ad-4687-a582-b07222dcdf4b
+		summarizeBy: none
+		sourceColumn: Column32
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column33
+		dataType: string
+		lineageTag: e9be0940-fa1a-446d-bd11-302d371400e0
+		summarizeBy: none
+		sourceColumn: Column33
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column34
+		dataType: string
+		lineageTag: 30d3e321-ffed-4aaf-a3fc-619249694350
+		summarizeBy: none
+		sourceColumn: Column34
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column35
+		dataType: string
+		lineageTag: e09413dc-d57f-4d36-b231-189928097ebd
+		summarizeBy: none
+		sourceColumn: Column35
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column36
+		dataType: string
+		lineageTag: da2450d8-60a7-418c-a726-00534a1ae62b
+		summarizeBy: none
+		sourceColumn: Column36
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column37
+		dataType: string
+		lineageTag: e2031ad4-1af2-415b-b2d2-d8826ff1a5b5
+		summarizeBy: none
+		sourceColumn: Column37
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column38
+		dataType: string
+		lineageTag: 482ae124-ba04-4c99-8352-ab54979f836e
+		summarizeBy: none
+		sourceColumn: Column38
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column39
+		dataType: string
+		lineageTag: 88b03eb2-93c7-43af-b74e-482c7ae8a65f
+		summarizeBy: none
+		sourceColumn: Column39
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column40
+		dataType: string
+		lineageTag: 1e679625-7794-4ca2-a840-e002f6735c0f
+		summarizeBy: none
+		sourceColumn: Column40
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column41
+		dataType: string
+		lineageTag: 256f20ec-97ec-42af-a458-c917bcf5e1f9
+		summarizeBy: none
+		sourceColumn: Column41
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column42
+		dataType: string
+		lineageTag: 2e6731ba-c628-4b90-ab5f-97338d052b0f
+		summarizeBy: none
+		sourceColumn: Column42
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column43
+		dataType: string
+		lineageTag: f1f3132d-ae8a-4f03-b387-6ba693022749
+		summarizeBy: none
+		sourceColumn: Column43
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_citing_clinical_trial = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_citing_clinical_trial_Sheet = Source{[Item="enr_citing_clinical_trial",Kind="Sheet"]}[Data]
+				in
+				    enr_citing_clinical_trial_Sheet
+
+	annotation PBI_ResultType = Table
+

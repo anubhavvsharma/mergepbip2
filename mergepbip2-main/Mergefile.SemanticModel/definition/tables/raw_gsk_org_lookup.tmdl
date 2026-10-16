@@ -1,0 +1,39 @@
+table raw_gsk_org_lookup
+	lineageTag: b60a171a-bf5c-4cfd-a323-0a37bca37188
+
+	column Column1
+		dataType: string
+		lineageTag: 9e63196a-1085-45a8-b0c1-20194f030eb4
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 5af28b42-2601-4953-aeab-08995ceee33b
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 98dd5b5e-e8f4-4b9a-9a00-db51d9e914e6
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition raw_gsk_org_lookup = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    raw_gsk_org_lookup_Sheet = Source{[Item="raw_gsk_org_lookup",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(raw_gsk_org_lookup_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

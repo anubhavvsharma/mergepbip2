@@ -1,0 +1,63 @@
+table sd_citing_organization_bridge
+	lineageTag: d3c2e54c-617b-44e2-8b47-25ac1262cf37
+
+	column Column1
+		dataType: string
+		lineageTag: a2b856c2-2d67-46e6-959f-85725aa98c93
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: f22aed5f-1c9d-4d88-9b01-0c2126498ca0
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 08abf2c3-3dbd-485d-af15-cdd989a3dd7e
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 3e37cb60-5e2e-443b-8d2d-db603a088d4d
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: df050668-882f-4d09-ad2e-1dee18f14807
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: 5c293d8c-0836-4148-b18c-c7505cfca2a5
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sd_citing_organization_bridge = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    sd_citing_organization_bridge_Sheet = Source{[Item="sd_citing_organization_bridge",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(sd_citing_organization_bridge_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,45 @@
+Citation Impact implementation
+
+Project: mergepbip2-main/Mergefile.pbip
+The supplied project originally contained one page, Portfolio Overview, with 84 visuals.
+Its semantic model contains 85 table definitions. Report field references were
+checked against the model. The report uses the adjacent Mergefile.SemanticModel.
+The publication import references impact_workbook (1).xlsx in Downloads; that file exists.
+
+Added Citation Impact as the second, initially active page at 1920 x 1080.
+The existing Portfolio Overview navigation already targets this page identifier.
+The new page includes navigation back to Portfolio Overview, eight dropdowns,
+four KPI cards, two column charts, and a publication detail table sorted by citations.
+The missing pages named in the screenshot were not fabricated.
+
+Charts use publication_year and the existing Previous Years / Current Year
+citation measures. Previous years are gray and the latest publication year is orange.
+Both charts contain column series only: no median lines, markers, labels, or legend entries.
+Median Citations remains a standalone KPI, as shown in the reference.
+
+Calculation semantics retained from the supplied model:
+- Total Citations counts distinct original/citing publication pairs in the link table.
+- Cited Publications counts distinct original publication IDs in that link table.
+- Percent cited divides Cited Publications by Publications.
+- Recent Citations uses citing publications from the latest citing year and prior year.
+- Current Year series means the latest publication year in the selected data,
+  which may differ from the calendar year.
+- Business area uses Business Unit, following the existing overview's business-area visual.
+- Disclosure type uses publication_type; open access route uses OA Group.
+- No impact-factor field exists in the model; that position says Not available.
+
+Validation: 148 JSON files parsed successfully. All report column and measure
+references resolve to declared model fields. New visuals fit the page bounds.
+Both new charts were checked to contain no median bindings.
+Repair after Desktop screenshot:
+- Replaced two unbound Deneb visuals with native clustered column charts.
+- Activated all six table projections, including the three inactive measures.
+- Added orange data bars to both table citation columns.
+- Set card display units to 1 (no abbreviation), displaying 24,036 instead of 24K.
+- Added Citation Year Color to highlight the latest publication year in orange.
+- Validated all 61 page/visual JSON files against Microsoft's schemas and checked
+  all report model field references. Both charts have no median bindings.
+- Saved the pre-repair page in citation_before_repair.zip outside the project.
+
+Live DAX results, refresh behavior, formatting and interactions must be verified
+in Power BI Desktop. Screenshot totals were not hard-coded.

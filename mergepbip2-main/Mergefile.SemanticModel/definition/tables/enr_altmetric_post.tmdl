@@ -1,0 +1,78 @@
+table enr_altmetric_post
+	lineageTag: 78e34749-193b-45a6-a87f-a80ca9d5b9fc
+
+	column Column1
+		dataType: string
+		lineageTag: aecc17f8-1931-4a38-855c-c7e85b914585
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 0d22de43-cef2-4f82-a484-565e889445ce
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: a4bd58e9-44de-479b-bac3-539bc32e6d44
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: d4bcb114-45e9-4e51-89f3-180739b2fb24
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: a448774f-8c92-4082-aabf-825204abce0b
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: 61a6e52a-e3ef-4ae8-ba35-a876eebb7c5b
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: 62d3a9be-520d-412f-b036-98b355142814
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: e27ada09-fa01-4f10-8531-fdfa8319f423
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_altmetric_post = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_altmetric_post_Sheet = Source{[Item="enr_altmetric_post",Kind="Sheet"]}[Data]
+				in
+				    enr_altmetric_post_Sheet
+
+	annotation PBI_ResultType = Table
+

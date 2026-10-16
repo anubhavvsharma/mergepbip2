@@ -1,0 +1,53 @@
+table dim_Product
+	lineageTag: 6db05283-bec1-4648-bd65-8d71c26b8a4e
+
+	column 'Primary Product'
+		dataType: string
+		lineageTag: 62d3b940-e89b-43d7-b235-69f463a50a71
+		summarizeBy: none
+		sourceColumn: [Primary Product]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Unit'
+		dataType: string
+		lineageTag: d49959aa-9e67-4c93-8106-c2cec6601698
+		summarizeBy: none
+		sourceColumn: [Business Unit]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority =
+			VAR ProductName = dim_Product[Primary Product]
+			RETURN
+				MINX (
+					FILTER ( ProductKeywordMapping, ProductKeywordMapping[Primary Product] = ProductName ),
+					ProductKeywordMapping[Priority]
+				)
+		dataType: int64
+		formatString: 0
+		lineageTag: 67783ea2-7094-4853-a312-ce32db159ea2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	/// Provisional display mapping of existing keyword-order numbers, not verified publication classifications.
+	column 'Priority Label' = SWITCH ( TRUE (), ISBLANK ( [Priority] ), BLANK (), [Priority] = 1, "Critical", [Priority] = 2, "High priority", [Priority] = 3, "Regional importance", [Priority] = 4, "Regular", "Not endorsed" )
+		dataType: string
+		lineageTag: 8594c728-b070-4e8e-8a69-bdc1309f6f33
+		summarizeBy: none
+		sortByColumn: 'Priority Label Order'
+
+	column 'Priority Label Order' = MIN ( 5, [Priority] )
+		dataType: int64
+		lineageTag: 522a859e-5754-4804-81e7-9a9d49a60d6e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Product = calculated
+		mode: import
+		source = ```
+				DISTINCT ( SELECTCOLUMNS (ProductKeywordMapping, "Primary Product", ProductKeywordMapping[Primary Product], "Business Unit", ProductKeywordMapping[Business Unit] ) ) 
+				```
+

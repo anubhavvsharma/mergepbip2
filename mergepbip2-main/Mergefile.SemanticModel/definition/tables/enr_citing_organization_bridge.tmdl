@@ -1,0 +1,72 @@
+table enr_citing_organization_bridge
+	lineageTag: 7c397844-3c7e-4f72-913f-37ca17d80983
+
+	column grid_id
+		dataType: string
+		lineageTag: 6e1b1475-af82-4ac8-a27d-c07cd3b8f35a
+		summarizeBy: none
+		sourceColumn: grid_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cited_dimensions_id
+		dataType: string
+		lineageTag: 2778f33c-3359-4869-bab9-6a4cfb14c31d
+		summarizeBy: none
+		sourceColumn: cited_dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column citing_source_type
+		dataType: string
+		lineageTag: a2b9bc51-9966-494e-ad0f-ff6175258019
+		summarizeBy: none
+		sourceColumn: citing_source_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column citing_entity_id
+		dataType: string
+		lineageTag: 901a32a7-9ab9-4500-841a-3c09527ce4d1
+		summarizeBy: none
+		sourceColumn: citing_entity_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column org_name
+		dataType: string
+		lineageTag: 18ada691-ae72-4987-8849-09ceaa349667
+		summarizeBy: none
+		sourceColumn: org_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: e23d388b-8931-4168-be44-24cffb8a52cd
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column enr_loaded_at
+		dataType: string
+		lineageTag: 3023c990-2a22-4d56-86da-58edde5281a5
+		summarizeBy: none
+		sourceColumn: enr_loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_citing_organization_bridge = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_citing_organization_bridge_Sheet = Source{[Item="enr_citing_organization_bridge",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(enr_citing_organization_bridge_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"grid_id", type text}, {"cited_dimensions_id", type text}, {"citing_source_type", type text}, {"citing_entity_id", type text}, {"org_name", type text}, {"country_name", type text}, {"enr_loaded_at", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

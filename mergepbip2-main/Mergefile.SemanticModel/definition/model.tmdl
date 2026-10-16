@@ -1,0 +1,103 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["_run_summary","di_citing_clinical_trial","di_citing_organization","di_pub_citing_journal","di_pub_citing_pub_link","di_pub_citing_publication","di_research_organization","document_impact","document_impact_clinical_trial","document_impact_funder","document_impact_geography","document_impact_posts","document_impact_researcher","enr_altmetric","enr_altmetric_geo","enr_altmetric_post","enr_altmetric_sentiment","enr_citing_clinical_trial","enr_citing_organization","enr_citing_organization_bridge","enr_clinical_trial","enr_funder","enr_journal_stats","enr_pub_citing_pub_link","enr_pub_citing_pub_org","enr_pub_citing_publication","enr_publication","enr_publication_clinical_trial","enr_research_organization","enr_researcher","raw_altmetric","raw_citing_clinical_trial","raw_clinical_trial","raw_funder","raw_gsk_org_lookup","raw_journal_stats","raw_pub_citing_publication","raw_publication","raw_research_organization","raw_researcher","sd_altmetric","sd_altmetric_geo","sd_altmetric_post","sd_altmetric_sentiment","sd_citing_clinical_trial","sd_citing_organization","sd_citing_organization_bridge","sd_clinical_trial","sd_funder","sd_gsk_org_lookup","sd_journal_stats","sd_pub_citing_pub_link","sd_pub_citing_pub_org","sd_pub_citing_publication","sd_publication_clinical_trial","sd_research_organization","sd_researcher","sd_study_document","unresolved_dois"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table _run_summary
+ref table di_citing_clinical_trial
+ref table DateTableTemplate_7e661c6f-665e-4576-8617-fee0128762e5
+ref table LocalDateTable_780934ce-e876-4861-ba37-46ade28e0e19
+ref table LocalDateTable_f5448fae-87fa-46b3-b50f-60efff1e9933
+ref table LocalDateTable_815b3ce8-cd43-4c04-b592-b558ab4d3608
+ref table di_citing_organization
+ref table di_pub_citing_journal
+ref table di_pub_citing_pub_link
+ref table di_pub_citing_publication
+ref table di_research_organization
+ref table document_impact
+ref table document_impact_clinical_trial
+ref table document_impact_funder
+ref table document_impact_geography
+ref table document_impact_posts
+ref table document_impact_researcher
+ref table enr_altmetric
+ref table enr_altmetric_geo
+ref table enr_altmetric_post
+ref table enr_altmetric_sentiment
+ref table enr_citing_clinical_trial
+ref table enr_citing_organization
+ref table enr_citing_organization_bridge
+ref table enr_clinical_trial
+ref table enr_funder
+ref table enr_journal_stats
+ref table enr_pub_citing_pub_link
+ref table enr_pub_citing_pub_org
+ref table enr_pub_citing_publication
+ref table enr_publication
+ref table LocalDateTable_3bd8d851-8a9c-4357-b2a9-18d2e6995977
+ref table enr_publication_clinical_trial
+ref table enr_research_organization
+ref table enr_researcher
+ref table raw_altmetric
+ref table LocalDateTable_eed1dd0c-0442-495b-abd2-bda959182522
+ref table LocalDateTable_b2c1bdfa-c317-4042-b1a8-3afd56955970
+ref table raw_citing_clinical_trial
+ref table LocalDateTable_4f48f616-6eaf-4668-b73d-2f423ead8c7b
+ref table LocalDateTable_b06b09e0-7d02-4c72-892d-a30ff99eb0ae
+ref table LocalDateTable_4439e9da-140e-465a-8dac-8e393bb40a6d
+ref table raw_clinical_trial
+ref table raw_funder
+ref table raw_gsk_org_lookup
+ref table raw_journal_stats
+ref table raw_pub_citing_publication
+ref table raw_publication
+ref table LocalDateTable_7e40dc5c-5d33-4acf-85d1-30c69a3fe107
+ref table raw_research_organization
+ref table raw_researcher
+ref table sd_altmetric
+ref table LocalDateTable_010341b0-cd77-46d2-8450-793e0975cbbe
+ref table LocalDateTable_accea9f5-fc87-4b90-89c8-f570b3153e81
+ref table sd_altmetric_geo
+ref table sd_altmetric_post
+ref table LocalDateTable_23084d44-a717-4fc9-b137-958d9ca679bb
+ref table sd_altmetric_sentiment
+ref table sd_citing_clinical_trial
+ref table LocalDateTable_7de2aeef-7d26-499a-aa48-ecf9abf3eef8
+ref table LocalDateTable_7b4acd96-e379-4912-aca3-f4a792a3e916
+ref table LocalDateTable_093ad0bf-a8ff-4a03-8cd5-12892d8285f7
+ref table sd_citing_organization
+ref table sd_citing_organization_bridge
+ref table sd_clinical_trial
+ref table sd_funder
+ref table sd_gsk_org_lookup
+ref table sd_journal_stats
+ref table sd_pub_citing_pub_link
+ref table sd_pub_citing_pub_org
+ref table sd_pub_citing_publication
+ref table sd_publication_clinical_trial
+ref table sd_research_organization
+ref table sd_researcher
+ref table sd_study_document
+ref table unresolved_dois
+ref table Date
+ref table _Measures
+ref table ProductKeywordMapping
+ref table dim_Product
+ref table CountryRegion
+ref table PublicationRegion
+ref table dim_Managed
+ref table MostCitedRankRange
+ref table CitationWindow
+
+ref cultureInfo en-IN
+

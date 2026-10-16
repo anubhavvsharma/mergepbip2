@@ -1,0 +1,38 @@
+table document_impact_clinical_trial
+	lineageTag: 2dd5f37b-9c7c-4b2a-9051-d6a89ad0c3b2
+
+	column Column1
+		dataType: string
+		lineageTag: 87c1174d-aa71-4df9-b221-8cc24681c47c
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 5363b294-44eb-45f7-9a37-4f5f26b30b24
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: a1e4587b-a613-42de-8eeb-fb79f7972d6b
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition document_impact_clinical_trial = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    document_impact_clinical_trial_Sheet = Source{[Item="document_impact_clinical_trial",Kind="Sheet"]}[Data]
+				in
+				    document_impact_clinical_trial_Sheet
+
+	annotation PBI_ResultType = Table
+

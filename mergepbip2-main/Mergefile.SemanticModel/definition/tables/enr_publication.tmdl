@@ -1,0 +1,792 @@
+table enr_publication
+	lineageTag: 4808561f-f79d-425f-aecb-f0bd2b58e013
+
+	column doi
+		dataType: string
+		lineageTag: 9d662fd2-0711-4441-8e59-9b500e93e5af
+		summarizeBy: none
+		sourceColumn: doi
+
+		annotation SummarizationSetBy = Automatic
+
+	column dimensions_id
+		dataType: string
+		lineageTag: 789fe9aa-a442-4d0e-9c65-62c0561bd37a
+		summarizeBy: none
+		sourceColumn: dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tactic_title
+		dataType: string
+		lineageTag: e790b825-bb46-43fd-ac66-f77b6086a391
+		summarizeBy: none
+		sourceColumn: tactic_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel
+		dataType: string
+		lineageTag: 0df4706a-b4b1-435a-9084-d8aa0c461532
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column tactic_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 29b3ee70-8767-4b8d-aed4-89a154299d29
+		summarizeBy: none
+		sourceColumn: tactic_date
+
+		variation Variation
+			isDefault
+			relationship: 68ddfc50-4bae-467c-b718-258bb86b5e8b
+			defaultHierarchy: LocalDateTable_3bd8d851-8a9c-4357-b2a9-18d2e6995977.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column publication_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 2205235e-56a4-48e1-99af-a3f9514ab09e
+		summarizeBy: sum
+		sourceColumn: publication_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column pub_citation
+		dataType: string
+		lineageTag: 3e5d99eb-b870-473c-a3ea-2c8a3194b6e5
+		summarizeBy: none
+		sourceColumn: pub_citation
+
+		annotation SummarizationSetBy = Automatic
+
+	column document_type
+		dataType: string
+		lineageTag: f0c37487-0af1-499e-93d7-ae5f9e3b3f49
+		summarizeBy: none
+		sourceColumn: document_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_erratum_or_retraction
+		dataType: string
+		lineageTag: 9fa8e858-e63b-437c-ac01-696e8449b184
+		summarizeBy: none
+		sourceColumn: is_erratum_or_retraction
+
+		annotation SummarizationSetBy = Automatic
+
+	column altmetric_id
+		dataType: string
+		lineageTag: baca6e30-a907-4ee3-917e-2ba0f3c20234
+		summarizeBy: none
+		sourceColumn: altmetric_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_open_access
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 02d60ce8-1db7-4c5a-bac9-03ded1023258
+		summarizeBy: none
+		sourceColumn: is_open_access
+
+		annotation SummarizationSetBy = Automatic
+
+	column open_access_status
+		dataType: string
+		lineageTag: 0e728524-fe67-4ba2-a1d4-4a86e2e26a03
+		summarizeBy: none
+		sourceColumn: open_access_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column recent_citations
+		dataType: string
+		lineageTag: 699c6e74-21e7-4d3f-bc0c-043d971d07ef
+		summarizeBy: none
+		sourceColumn: recent_citations
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_id
+		dataType: string
+		lineageTag: 9df7666d-a2ea-4b76-b1a8-ad21ff814d02
+		summarizeBy: none
+		sourceColumn: journal_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column arxiv_id
+		dataType: string
+		lineageTag: 5f056340-948b-4f02-9c5c-248c31b27321
+		summarizeBy: none
+		sourceColumn: arxiv_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column abstract
+		dataType: string
+		lineageTag: fffcbc7d-384a-41d0-9c77-b7523080940a
+		summarizeBy: none
+		sourceColumn: abstract
+
+		annotation SummarizationSetBy = Automatic
+
+	column author_names
+		dataType: string
+		lineageTag: 90a2f5bf-035e-4044-8af8-4798f422c7bd
+		summarizeBy: none
+		sourceColumn: author_names
+
+		annotation SummarizationSetBy = Automatic
+
+	column corresponding_author
+		dataType: string
+		lineageTag: debbdf69-0629-449d-9633-1bf010c74076
+		summarizeBy: none
+		sourceColumn: corresponding_author
+
+		annotation SummarizationSetBy = Automatic
+
+	column orcid_list
+		dataType: string
+		lineageTag: 9d6bfc42-fcaf-4ce3-b0de-5ff58c8ef4d2
+		summarizeBy: none
+		sourceColumn: orcid_list
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_citation_ratio
+		dataType: string
+		lineageTag: 024c11d6-c5e4-4863-8fc5-0257f227106c
+		summarizeBy: none
+		sourceColumn: field_citation_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column relative_citation_ratio
+		dataType: string
+		lineageTag: bc329221-c4ae-4f9a-b448-0f376e525699
+		summarizeBy: none
+		sourceColumn: relative_citation_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column dimensions_url
+		dataType: string
+		lineageTag: db64cc20-064a-46dd-9ca2-4e01bda83a98
+		summarizeBy: none
+		sourceColumn: dimensions_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column linkout
+		dataType: string
+		lineageTag: 8800a323-a177-4b71-b9b2-cb81adf1d124
+		summarizeBy: none
+		sourceColumn: linkout
+
+		annotation SummarizationSetBy = Automatic
+
+	column mesh_terms
+		dataType: string
+		lineageTag: 1872e861-d608-4451-8829-da38aaa7ad33
+		summarizeBy: none
+		sourceColumn: mesh_terms
+
+		annotation SummarizationSetBy = Automatic
+
+	column funders_name
+		dataType: string
+		lineageTag: 4035336e-fc46-4099-b3ed-1a592b74c892
+		summarizeBy: none
+		sourceColumn: funders_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column disease_area_proxy
+		dataType: string
+		lineageTag: dd2e0716-7bd1-4761-ab66-5d934cf9e5ca
+		summarizeBy: none
+		sourceColumn: disease_area_proxy
+
+		annotation SummarizationSetBy = Automatic
+
+	column authors_affiliation
+		dataType: string
+		lineageTag: e0bfbc1d-6280-4019-bae2-1be2605648fe
+		summarizeBy: none
+		sourceColumn: authors_affiliation
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_origin
+		dataType: string
+		lineageTag: 511eabaf-3f8a-400e-ab6e-19ab3f9b949d
+		summarizeBy: none
+		sourceColumn: source_origin
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_origin_keyword
+		dataType: string
+		lineageTag: f3a1d3fd-e0ed-414d-85e4-443897ea2c76
+		summarizeBy: none
+		sourceColumn: source_origin_keyword
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_origin_doi
+		dataType: string
+		lineageTag: 20e18742-a61d-4de5-8e5c-953864fbf17e
+		summarizeBy: none
+		sourceColumn: source_origin_doi
+
+		annotation SummarizationSetBy = Automatic
+
+	column enr_loaded_at
+		dataType: string
+		lineageTag: 5871dd68-05b8-4655-b191-37bfb8ab5e19
+		summarizeBy: none
+		sourceColumn: enr_loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column acknowledgements
+		dataType: string
+		lineageTag: 81063294-286c-4b04-920c-e10efdbd75c5
+		summarizeBy: none
+		sourceColumn: acknowledgements
+
+		annotation SummarizationSetBy = Automatic
+
+	column authors_count
+		dataType: string
+		lineageTag: 3903d50f-09ac-4975-bad5-85089262b625
+		summarizeBy: none
+		sourceColumn: authors_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column book_doi
+		dataType: string
+		lineageTag: c59cf8e9-668f-40a5-85bc-7254624762fb
+		summarizeBy: none
+		sourceColumn: book_doi
+
+		annotation SummarizationSetBy = Automatic
+
+	column book_series_title
+		dataType: string
+		lineageTag: 9cb1ba5f-c01d-4530-ade8-92379fb614ec
+		summarizeBy: none
+		sourceColumn: book_series_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column book_title
+		dataType: string
+		lineageTag: 95c59823-74fa-4b86-8904-b4a13072a1b0
+		summarizeBy: none
+		sourceColumn: book_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_bra
+		dataType: string
+		lineageTag: fe3a65ba-c572-40f3-9c8d-8d51aebd2846
+		summarizeBy: none
+		sourceColumn: category_bra
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_for
+		dataType: string
+		lineageTag: 0e2e82a0-a2d0-403d-b6f4-35d720c45b98
+		summarizeBy: none
+		sourceColumn: category_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_for_2020
+		dataType: string
+		lineageTag: d95abe0b-1270-4a03-98ab-20640a5aeff5
+		summarizeBy: none
+		sourceColumn: category_for_2020
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_hrcs_hc
+		dataType: string
+		lineageTag: 794b5890-4a30-4f34-82d1-2cc5ccbebe4b
+		summarizeBy: none
+		sourceColumn: category_hrcs_hc
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_hrcs_rac
+		dataType: string
+		lineageTag: 77f481eb-ec00-46dd-971c-e8f1b212e460
+		summarizeBy: none
+		sourceColumn: category_hrcs_rac
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_icrp_cso
+		dataType: string
+		lineageTag: 936e35d4-e45a-4e5b-95cb-47dd91b13dfc
+		summarizeBy: none
+		sourceColumn: category_icrp_cso
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_icrp_ct
+		dataType: string
+		lineageTag: 4a4a4952-c13c-40a3-a512-a0e01597e911
+		summarizeBy: none
+		sourceColumn: category_icrp_ct
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_rcdc
+		dataType: string
+		lineageTag: 1b2b369c-f7be-49af-b6c9-15aef3c2e634
+		summarizeBy: none
+		sourceColumn: category_rcdc
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_sdg
+		dataType: string
+		lineageTag: 2af64d3d-3d78-4db8-9cd9-0cfffb79cd81
+		summarizeBy: none
+		sourceColumn: category_sdg
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_uoa
+		dataType: string
+		lineageTag: 978abbad-6fc7-4a91-ab9d-4293410a791d
+		summarizeBy: none
+		sourceColumn: category_uoa
+
+		annotation SummarizationSetBy = Automatic
+
+	column clinical_trial_ids
+		dataType: string
+		lineageTag: 777c1f43-8505-4ec5-aeb0-60a9092e1bf4
+		summarizeBy: none
+		sourceColumn: clinical_trial_ids
+
+		annotation SummarizationSetBy = Automatic
+
+	column concepts
+		dataType: string
+		lineageTag: 3d488f5c-cbe1-4e7d-8a1a-9ba78ef67d9e
+		summarizeBy: none
+		sourceColumn: concepts
+
+		annotation SummarizationSetBy = Automatic
+
+	column concepts_relevant
+		dataType: string
+		lineageTag: 02a4511f-6ea5-4593-b67f-1536494c6e7d
+		summarizeBy: none
+		sourceColumn: concepts_relevant
+
+		annotation SummarizationSetBy = Automatic
+
+	column concepts_scores
+		dataType: string
+		lineageTag: 92326e61-9d1d-476d-a235-13d3390320cc
+		summarizeBy: none
+		sourceColumn: concepts_scores
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_inserted
+		dataType: string
+		lineageTag: 7fc9306d-3223-4594-807c-fd6ceee3603a
+		summarizeBy: none
+		sourceColumn: date_inserted
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_online
+		dataType: string
+		lineageTag: 909a7a47-b163-4804-8af3-a08a1bf1bfc7
+		summarizeBy: none
+		sourceColumn: date_online
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_print
+		dataType: string
+		lineageTag: 4eab9f85-d04d-420c-ab82-2ae4d0629df4
+		summarizeBy: none
+		sourceColumn: date_print
+
+		annotation SummarizationSetBy = Automatic
+
+	column editors
+		dataType: string
+		lineageTag: 4177ff1e-0c0a-47e4-9d29-3481508bd096
+		summarizeBy: none
+		sourceColumn: editors
+
+		annotation SummarizationSetBy = Automatic
+
+	column funder_countries
+		dataType: string
+		lineageTag: bfec64fa-ec0d-4ec7-a9e7-80005dbfe360
+		summarizeBy: none
+		sourceColumn: funder_countries
+
+		annotation SummarizationSetBy = Automatic
+
+	column funding_section
+		dataType: string
+		lineageTag: 19808b76-a825-44f7-82ec-703129e96d35
+		summarizeBy: none
+		sourceColumn: funding_section
+
+		annotation SummarizationSetBy = Automatic
+
+	column isbn
+		dataType: string
+		lineageTag: 928f484e-07fa-45e9-9233-8dc27bcab9ba
+		summarizeBy: none
+		sourceColumn: isbn
+
+		annotation SummarizationSetBy = Automatic
+
+	column issn
+		dataType: string
+		lineageTag: 2b8f81a6-cc87-4285-a64e-7110bd918c83
+		summarizeBy: none
+		sourceColumn: issn
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue
+		dataType: string
+		lineageTag: 972c9a11-6081-4a61-8354-615659fa7efb
+		summarizeBy: none
+		sourceColumn: issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_lists
+		dataType: string
+		lineageTag: 6304ccc1-4cec-41f5-b58e-28d56727d364
+		summarizeBy: none
+		sourceColumn: journal_lists
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_title_raw
+		dataType: string
+		lineageTag: 2b28f081-30e4-4e9c-b952-ecb1dbf9729e
+		summarizeBy: none
+		sourceColumn: journal_title_raw
+
+		annotation SummarizationSetBy = Automatic
+
+	column open_access
+		dataType: string
+		lineageTag: 0326cd77-9c80-4aa5-a0b5-7901b5290d1d
+		summarizeBy: none
+		sourceColumn: open_access
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		lineageTag: b1475141-5fb7-4096-9f1b-c4fe99a9cb00
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pmcid
+		dataType: string
+		lineageTag: cec03d53-23fc-4d99-88de-6ff360b6d9c2
+		summarizeBy: none
+		sourceColumn: pmcid
+
+		annotation SummarizationSetBy = Automatic
+
+	column pmid
+		dataType: int64
+		formatString: 0
+		lineageTag: b3460486-a3d9-4ec5-98bd-cfe917a3c4a0
+		summarizeBy: sum
+		sourceColumn: pmid
+
+		annotation SummarizationSetBy = Automatic
+
+	column proceedings_title
+		dataType: string
+		lineageTag: fee498b5-664c-41e8-aef1-038511351aa0
+		summarizeBy: none
+		sourceColumn: proceedings_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column publisher
+		dataType: string
+		lineageTag: f2352551-5e4f-4504-aff4-c6461d1e2790
+		summarizeBy: none
+		sourceColumn: publisher
+
+		annotation SummarizationSetBy = Automatic
+
+	column referenced_pubs
+		dataType: string
+		lineageTag: 04f85581-a111-4480-b19e-cca13a1723e8
+		summarizeBy: none
+		sourceColumn: referenced_pubs
+
+		annotation SummarizationSetBy = Automatic
+
+	column research_org_cities
+		dataType: string
+		lineageTag: 8a4f5e07-256f-41cc-a962-61aea5759234
+		summarizeBy: none
+		sourceColumn: research_org_cities
+
+		annotation SummarizationSetBy = Automatic
+
+	column research_org_countries
+		dataType: string
+		lineageTag: 511e4b14-9f13-4e19-8d19-fd812aa4bebe
+		summarizeBy: none
+		sourceColumn: research_org_countries
+
+		annotation SummarizationSetBy = Automatic
+
+	column research_org_state_codes
+		dataType: string
+		lineageTag: a9d7dd7b-4fa4-4834-8b57-b9b90be2d4bf
+		summarizeBy: none
+		sourceColumn: research_org_state_codes
+
+		annotation SummarizationSetBy = Automatic
+
+	column research_org_types
+		dataType: string
+		lineageTag: 7a49358f-2fc6-499b-8804-bcb5711f5fc0
+		summarizeBy: none
+		sourceColumn: research_org_types
+
+		annotation SummarizationSetBy = Automatic
+
+	column resulting_publication_doi
+		dataType: string
+		lineageTag: e69d6f71-4faf-454d-a09b-1e733235ea0e
+		summarizeBy: none
+		sourceColumn: resulting_publication_doi
+
+		annotation SummarizationSetBy = Automatic
+
+	column relevance_score
+		dataType: string
+		lineageTag: fc2ccd06-1db0-41ee-bc00-26918f560da3
+		summarizeBy: none
+		sourceColumn: relevance_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_title
+		dataType: string
+		lineageTag: 0c0d9130-4c27-4112-87c9-6b76f4b77b1d
+		summarizeBy: none
+		sourceColumn: source_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column subtitles
+		dataType: string
+		lineageTag: a673a274-5d6c-4103-ab51-1e6f332b1d32
+		summarizeBy: none
+		sourceColumn: subtitles
+
+		annotation SummarizationSetBy = Automatic
+
+	column supporting_grant_ids
+		dataType: string
+		lineageTag: 98e0cf67-06b3-4ad2-8d1c-9bbb1f7dd706
+		summarizeBy: none
+		sourceColumn: supporting_grant_ids
+
+		annotation SummarizationSetBy = Automatic
+
+	column publication_type
+		dataType: string
+		lineageTag: 030dd229-3ea6-4f76-9346-4ae0df3f0af8
+		summarizeBy: none
+		sourceColumn: publication_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column volume
+		dataType: int64
+		formatString: 0
+		lineageTag: 46f19237-f506-4b89-aff0-2b0737409c92
+		summarizeBy: sum
+		sourceColumn: volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'OA Group' =
+			VAR OAStatus =
+				SUBSTITUTE (
+					LOWER ( TRIM ( COALESCE ( [open_access_status], "closed" ) ) ),
+					"oa_all|",
+					""
+				)
+			RETURN
+				IF (
+					OAStatus IN { "gold", "hybrid", "bronze", "green", "open" },
+					"Open",
+					"Closed"
+				)
+		dataType: string
+		lineageTag: 7719d345-d68a-4d18-a8d0-315c11bed096
+		summarizeBy: none
+		sortByColumn: 'OA Group Sort'
+
+		annotation SummarizationSetBy = User
+
+	column 'OA Group Sort' =
+			VAR OAStatus =
+				SUBSTITUTE (
+					LOWER ( TRIM ( COALESCE ( [open_access_status], "closed" ) ) ),
+					"oa_all|",
+					""
+				)
+			RETURN
+				IF (
+					OAStatus IN { "gold", "hybrid", "bronze", "green", "open" },
+					1,
+					2
+				)
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: be619726-0ae8-4394-8248-cf673cb6483d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column 'Mix Axis' = "All publications"
+		dataType: string
+		isHidden
+		lineageTag: eadcf7b7-381d-4f03-be19-3418549a88ad
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column 'Primary Product' =
+			VAR PublicationText = LOWER ( COALESCE ( enr_publication[tactic_title], "" ) & " " & COALESCE ( enr_publication[abstract], "" ) )
+			RETURN MAXX ( TOPN ( 1, FILTER ( ProductKeywordMapping, CONTAINSSTRING ( PublicationText, ProductKeywordMapping[Keyword] ) ), ProductKeywordMapping[Priority], ASC ), ProductKeywordMapping[Primary Product] )
+		dataType: string
+		lineageTag: e330e864-8ee3-46bb-8100-6eb9c7c4053b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column 'Managed by' =
+			VAR Countries = TRIM ( COALESCE ( enr_publication[research_org_countries], "" ) )
+			VAR CountryCount = IF ( Countries = "", 0, 1 + LEN ( Countries ) - LEN ( SUBSTITUTE ( Countries, "|", "" ) ) )
+			RETURN SWITCH ( TRUE, CountryCount = 0, BLANK (), CountryCount = 1, "Local", CountryCount = 2, "Regional", "Global" )
+		dataType: string
+		lineageTag: f6d9e432-9112-4930-aa62-51720f626da2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column 'DOCUMENT TITLE' =
+			VAR FullTitle = TRIM ( COALESCE ( [tactic_title], "" ) )
+			VAR SearchTitle = LOWER ( FullTitle )
+			VAR ShortTitle =
+				SWITCH (
+					TRUE (),
+					CONTAINSSTRING ( SearchTitle, "dreamm-8" ), "DREAMM-8 readout",
+					CONTAINSSTRING ( SearchTitle, "dreamm-2" ) && CONTAINSSTRING ( SearchTitle, "13-month" ), "DREAMM-2 13-month",
+					CONTAINSSTRING ( SearchTitle, "dreamm-2" ) && CONTAINSSTRING ( SearchTitle, "final" ), "DREAMM-2 final analysis",
+					CONTAINSSTRING ( SearchTitle, "dreamm-3" ), "DREAMM-3 phase 3",
+					CONTAINSSTRING ( SearchTitle, "immunogenic cell death" ), "Immunogenic cell death",
+					CONTAINSSTRING ( SearchTitle, "corneal" ), "Corneal event management",
+					CONTAINSSTRING ( SearchTitle, "treatment pattern" ) || CONTAINSSTRING ( SearchTitle, "rrmm treatment" ), "RRMM treatment patterns",
+					CONTAINSSTRING ( SearchTitle, "dreamm-2" ), "DREAMM-2 primary",
+					IF ( LEN ( FullTitle ) > 44, LEFT ( FullTitle, 41 ) & "...", FullTitle )
+				)
+			RETURN
+				ShortTitle
+					& IF (
+						NOT ISBLANK ( [journal_title_raw] ) && TRIM ( [journal_title_raw] ) <> "",
+						UNICHAR ( 10 ) & TRIM ( [journal_title_raw] ),
+						""
+					)
+		dataType: string
+		lineageTag: 01886744-0623-447f-9a91-7b5a1656cb8e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column YEAR = [publication_year]
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e9b7f56-5c27-4101-8995-0909297274ed
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	column 'Publication Short Name' =
+			VAR FullTitle = TRIM ( COALESCE ( enr_publication[tactic_title], "" ) )
+			VAR ColonPosition = SEARCH ( ":", FullTitle, 1, 0 )
+			VAR DashPosition = SEARCH ( " - ", FullTitle, 1, 0 )
+			VAR FirstDelimiter =
+				SWITCH (
+					TRUE (),
+					ColonPosition > 0 && DashPosition > 0, MIN ( ColonPosition, DashPosition ),
+					ColonPosition > 0, ColonPosition,
+					DashPosition > 0, DashPosition,
+					0
+				)
+			VAR DelimitedLabel = IF ( FirstDelimiter > 4, TRIM ( LEFT ( FullTitle, FirstDelimiter - 1 ) ) )
+			VAR FourthSpace = SEARCH ( "|", SUBSTITUTE ( FullTitle, " ", "|", 4 ), 1, 0 )
+			VAR FourWordLabel = IF ( FourthSpace > 0, LEFT ( FullTitle, FourthSpace - 1 ), FullTitle )
+			RETURN
+				IF (
+					FullTitle = "",
+					BLANK (),
+					COALESCE ( DelimitedLabel, FourWordLabel, FullTitle )
+				)
+		dataType: string
+		lineageTag: 55785935-92c6-41b6-b44e-80aeea6b6728
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	partition enr_publication = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_publication_Sheet = Source{[Item="enr_publication",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(enr_publication_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"doi", type text}, {"dimensions_id", type text}, {"tactic_title", type text}, {"channel", type text}, {"tactic_date", type date}, {"publication_year", Int64.Type}, {"pub_citation", type any}, {"document_type", type any}, {"is_erratum_or_retraction", type any}, {"altmetric_id", type any}, {"is_open_access", type logical}, {"open_access_status", type text}, {"recent_citations", type any}, {"journal_id", type text}, {"arxiv_id", type any}, {"abstract", type text}, {"author_names", type text}, {"corresponding_author", type any}, {"orcid_list", type any}, {"field_citation_ratio", type any}, {"relative_citation_ratio", type any}, {"dimensions_url", type text}, {"linkout", type text}, {"mesh_terms", type text}, {"funders_name", type text}, {"disease_area_proxy", type any}, {"authors_affiliation", type text}, {"source_origin", type text}, {"source_origin_keyword", type any}, {"source_origin_doi", type text}, {"enr_loaded_at", type any}, {"acknowledgements", type any}, {"authors_count", type any}, {"book_doi", type any}, {"book_series_title", type any}, {"book_title", type any}, {"category_bra", type text}, {"category_for", type text}, {"category_for_2020", type any}, {"category_hrcs_hc", type text}, {"category_hrcs_rac", type text}, {"category_icrp_cso", type text}, {"category_icrp_ct", type text}, {"category_rcdc", type text}, {"category_sdg", type text}, {"category_uoa", type text}, {"clinical_trial_ids", type any}, {"concepts", type any}, {"concepts_relevant", type any}, {"concepts_scores", type any}, {"date_inserted", type any}, {"date_online", type any}, {"date_print", type any}, {"editors", type any}, {"funder_countries", type any}, {"funding_section", type any}, {"isbn", type any}, {"issn", type any}, {"issue", type text}, {"journal_lists", type text}, {"journal_title_raw", type text}, {"open_access", type text}, {"pages", type text}, {"pmcid", type text}, {"pmid", Int64.Type}, {"proceedings_title", type any}, {"publisher", type any}, {"referenced_pubs", type any}, {"research_org_cities", type text}, {"research_org_countries", type text}, {"research_org_state_codes", type text}, {"research_org_types", type any}, {"resulting_publication_doi", type any}, {"relevance_score", type any}, {"source_title", type any}, {"subtitles", type any}, {"supporting_grant_ids", type any}, {"publication_type", type text}, {"volume", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,22 @@
+table CitationWindow
+	lineageTag: ef466cb4-c749-443a-a4d6-f58eec45111f
+
+	column 'Citation Window'
+		dataType: string
+		lineageTag: f1996212-87c4-46da-a0a4-0d1561fbaf33
+		sourceColumn: [Citation Window]
+		sortByColumn: Sort
+
+	column Sort
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d397c1a1-9a1d-4c82-a2e4-7db006c832a7
+		sourceColumn: [Sort]
+
+	partition CitationWindow = calculated
+		mode: import
+		source = DATATABLE ( "Citation Window", STRING, "Sort", INTEGER, { { "All time", 1 }, { "Recent citations", 2 } } )
+
+	annotation PBI_Id = 9b9ef834dbbb45879213dbca0a516722
+

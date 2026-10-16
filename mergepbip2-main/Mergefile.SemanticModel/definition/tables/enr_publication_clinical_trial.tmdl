@@ -1,0 +1,40 @@
+table enr_publication_clinical_trial
+	lineageTag: d9a51c26-c81e-4ba9-b790-20e38d4457b6
+
+	column dimensions_id
+		dataType: string
+		lineageTag: 59006d2b-40d0-4e3b-81c8-d062822ec268
+		summarizeBy: none
+		sourceColumn: dimensions_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ct_id
+		dataType: string
+		lineageTag: 64df5d0c-dc9d-4a5b-96d7-2704637e7656
+		summarizeBy: none
+		sourceColumn: ct_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column enr_loaded_at
+		dataType: string
+		lineageTag: ef6875d5-5ece-49c8-998d-95181b921b35
+		summarizeBy: none
+		sourceColumn: enr_loaded_at
+
+		annotation SummarizationSetBy = Automatic
+
+	partition enr_publication_clinical_trial = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\Nishant Dwivedi\Desktop\Downloads\impact_workbook (1).xlsx"), null, true),
+				    enr_publication_clinical_trial_Sheet = Source{[Item="enr_publication_clinical_trial",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(enr_publication_clinical_trial_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"dimensions_id", type any}, {"ct_id", type any}, {"enr_loaded_at", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
